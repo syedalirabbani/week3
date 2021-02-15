@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+
+
+</head>
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<button onclick="buttonPressed(0)">Rock</button>
+	<button onclick="buttonPressed(1)">Paper</button>
+	<button onclick="buttonPressed(2)">Scissors</button>
+
+<script type="text/javascript">
+
+	var weapons = ["Rock","Paper","Scissors"]
+	var userScore = 0;
+	var computerScore = 0;
+
+	function buttonPressed(choice){
+		var computerChoice = Math.floor(Math.random()*3)
+		if(choice == 0) {
+			if(computerChoice == 0){
+				alert("You select " +weapons[choice] +" Computer select "+ weapons[computerChoice] + "It's a draw . Computer"+computerScore+ " User:"+userScore)
+			}
+			
+			else if (computerChoice == 1){
+				alert("You select " + weapons[choice]+". Computer select "+ weapons[computerChoice] + "You lose. Computer "+computerScore+ " User: "+userScore)
+			}
+			else {
+				userScore++;
+				alert("You select " +weapons[choice]+" Computer select "+ weapons[computerChoice] + "You win. Computer"+computerScore+ " User: "+userScore)
+			}
+
+		}
+		
+	}
+
+	
+
+	
+
+
+
+</script>
+
+</body>
+</html>
